@@ -1,0 +1,56 @@
+[
+    {
+        "image": "https://example.com/images/nike-air-max.jpg",
+        "name": "Nike Air Max",
+        "brandName": "Nike",
+        "type": "Shoes",
+        "price": 120,
+        "shortDescription": "Comfortable and stylish sneakers",
+        "rating": 4.5
+    },
+    {
+        "image": "https://example.com/images/adidas-ultraboost.jpg",
+        "name": "Adidas Ultraboost",
+        "brandName": "Adidas",
+        "type": "Shoes",
+        "price": 180,
+        "shortDescription": "High-performance running shoes",
+        "rating": 4.7
+    },
+    {
+        "image": "https://example.com/images/gucci-tshirt.jpg",
+        "name": "Gucci T-Shirt",
+        "brandName": "Gucci",
+        "type": "Clothing",
+        "price": 250,
+        "shortDescription": "Luxury cotton t-shirt",
+        "rating": 4.3
+    },
+    {
+        "image": "https://example.com/images/zara-jacket.jpg",
+        "name": "Zara Leather Jacket",
+        "brandName": "Zara",
+        "type": "Clothing",
+        "price": 100,
+        "shortDescription": "Stylish leather jacket",
+        "rating": 4.6
+    },
+    {
+        "image": "https://example.com/images/hm-jeans.jpg",
+        "name": "H&M Slim Fit Jeans",
+        "brandName": "H&M",
+        "type": "Clothing",
+        "price": 40,
+        "shortDescription": "Comfortable slim fit jeans",
+        "rating": 4.1
+    },
+    {
+        "image": "https://example.com/images/levis-501.jpg",
+        "name": "Levi's 501 Original Jeans",
+        "brandName": "Levi's",
+        "type": "Clothing",
+        "price": 60,
+        "shortDescription": "Classic straight fit jeans",
+        "rating": 4.8
+    }
+]

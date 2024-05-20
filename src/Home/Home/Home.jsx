@@ -1,15 +1,16 @@
-import Footer from "../../Shared/Footer/Footer";
-import Navbar from "../../Shared/Navbar/Navbar";
-import Banner from "../Banner";
 
+import Banner from "../Banner";
+import Card from "../Card/Card"
 
 
 const Home = () => {
     return (
        <>
-       <Navbar></Navbar>
+       
        <Banner></Banner>
-       <Footer></Footer>
+       <Card></Card>
+       
+    
        </>
     );
 };
