@@ -1,17 +1,20 @@
+import { Link } from "react-router-dom";
 
 
 const BrandCard = ({ brand }) => {
-     const {name}=brand
+     const {_id,name,brandName,type,price,description,rating,imageUrl}=brand
 
     return (
         <>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <figure><img src={imageUrl} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title"></h2>
+                    <h2 className="card-title">{brandName}</h2>
                     <p>{name}</p>
+                    <p>{price}</p>
+                    <p>{rating}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">View Details</button>
+                       <Link to={`/brand/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
                     </div>
                 </div>
             </div>
