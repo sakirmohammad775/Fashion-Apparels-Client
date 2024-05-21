@@ -1,3 +1,5 @@
+
+
 {/*Image
 Name
 Brand Name
@@ -8,6 +10,7 @@ Rating
 Add button*/}
 
 const AddBrand = () => {
+
     const handleButton = event => {
         event.preventDefault()
         const form = event.target
@@ -22,6 +25,19 @@ const AddBrand = () => {
 
         const newBrand={name,brandName,type,price,description,rating,imageUrl}
         console.log(newBrand);
+        
+        //send new brand data in the server
+        fetch('http://localhost:5000/fashion',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(newBrand)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
     }
     return (
         <>

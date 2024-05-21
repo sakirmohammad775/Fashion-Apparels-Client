@@ -1,7 +1,7 @@
 
 import Banner from "../Banner";
-import Card from "../Card/Card"
 
+import Card from "../BrandCard/Card";
 
 const Home = () => {
     return (
