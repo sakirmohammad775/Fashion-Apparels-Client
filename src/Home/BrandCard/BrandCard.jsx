@@ -16,7 +16,7 @@ const BrandCard = ({ brand }) => {
 
                     <div className="card-actions justify-end">
                        
-                       <Link to={`/brand/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
+                    <Link to={`/brand/${brandName}`}> <button className="btn btn-primary">View Details</button></Link>
                     </div>
                 </div>
             </div>
