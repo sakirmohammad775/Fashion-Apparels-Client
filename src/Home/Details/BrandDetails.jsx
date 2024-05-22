@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const BrandDetails = () => {
     const brands = useLoaderData();
@@ -21,7 +21,9 @@ const BrandDetails = () => {
                         <p>{product.name}</p>
                         <p>{product.price}</p>
                         <p>{product.rating}</p>
-                        <div className="card-actions justify-end"></div>
+                        <div className="card-actions justify-end">
+                            <Link to={`/product/${product._id}`}><button>View Products</button></Link>
+                        </div>
                     </div>
                 </div>
             ))}

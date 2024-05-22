@@ -3,6 +3,8 @@ import Home from "../Home/Home/Home";
 import Main from "../Layout/Main/Main";
 import AddBrand from "../AddBrand/AddBrand"
 import BrandDetails from "../Home/Details/BrandDetails";
+import MyCart from "../Mycart/MyCart";
+import ProductDetails from "../Home/Details/ProductDetails";
 
 
 export const router = createBrowserRouter([
@@ -23,6 +25,16 @@ export const router = createBrowserRouter([
           path:"brand/:brandName",
           element:<BrandDetails></BrandDetails>,
           loader:()=>fetch('http://localhost:5000/fashion')
+        },
+        {
+          path:"/product/:id",
+          element:<ProductDetails></ProductDetails>,
+          loader:()=>fetch('http://localhost:5000/fashion')
+        },
+        {
+          path:"/myCart",
+          element:<MyCart></MyCart>
+
         }
       ]
     },
