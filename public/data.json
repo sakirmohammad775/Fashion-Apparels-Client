@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "image": "https://example.com/images/nike-air-max.jpg",
         "name": "Nike Air Max",
         "brandName": "Nike",
@@ -9,6 +10,37 @@
         "rating": 4.5
     },
     {
+        "id": "2",
+        "image": "https://example.com/images/nike-tshirt.jpg",
+        "name": "Nike T-Shirt",
+        "brandName": "Nike",
+        "type": "Clothing",
+        "price": 50,
+        "shortDescription": "Comfortable cotton t-shirt",
+        "rating": 4.2
+    },
+    {
+        "id": "3",
+        "image": "https://example.com/images/nike-shorts.jpg",
+        "name": "Nike Shorts",
+        "brandName": "Nike",
+        "type": "Clothing",
+        "price": 40,
+        "shortDescription": "Lightweight running shorts",
+        "rating": 4.3
+    },
+    {
+        "id": "4",
+        "image": "https://example.com/images/nike-jacket.jpg",
+        "name": "Nike Jacket",
+        "brandName": "Nike",
+        "type": "Clothing",
+        "price": 100,
+        "shortDescription": "Stylish and warm jacket",
+        "rating": 4.4
+    },
+    {
+        "id": "5",
         "image": "https://example.com/images/adidas-ultraboost.jpg",
         "name": "Adidas Ultraboost",
         "brandName": "Adidas",
@@ -18,6 +50,37 @@
         "rating": 4.7
     },
     {
+        "id": "6",
+        "image": "https://example.com/images/adidas-hoodie.jpg",
+        "name": "Adidas Hoodie",
+        "brandName": "Adidas",
+        "type": "Clothing",
+        "price": 70,
+        "shortDescription": "Comfortable and warm hoodie",
+        "rating": 4.5
+    },
+    {
+        "id": "7",
+        "image": "https://example.com/images/adidas-pants.jpg",
+        "name": "Adidas Pants",
+        "brandName": "Adidas",
+        "type": "Clothing",
+        "price": 60,
+        "shortDescription": "Comfortable sports pants",
+        "rating": 4.4
+    },
+    {
+        "id": "8",
+        "image": "https://example.com/images/adidas-shirt.jpg",
+        "name": "Adidas Shirt",
+        "brandName": "Adidas",
+        "type": "Clothing",
+        "price": 50,
+        "shortDescription": "Breathable sports shirt",
+        "rating": 4.3
+    },
+    {
+        "id": "9",
         "image": "https://example.com/images/gucci-tshirt.jpg",
         "name": "Gucci T-Shirt",
         "brandName": "Gucci",
@@ -27,6 +90,37 @@
         "rating": 4.3
     },
     {
+        "id": "10",
+        "image": "https://example.com/images/gucci-shoes.jpg",
+        "name": "Gucci Shoes",
+        "brandName": "Gucci",
+        "type": "Shoes",
+        "price": 500,
+        "shortDescription": "Luxury leather shoes",
+        "rating": 4.6
+    },
+    {
+        "id": "11",
+        "image": "https://example.com/images/gucci-bag.jpg",
+        "name": "Gucci Bag",
+        "brandName": "Gucci",
+        "type": "Accessories",
+        "price": 1500,
+        "shortDescription": "Luxury leather handbag",
+        "rating": 4.7
+    },
+    {
+        "id": "12",
+        "image": "https://example.com/images/gucci-jacket.jpg",
+        "name": "Gucci Jacket",
+        "brandName": "Gucci",
+        "type": "Clothing",
+        "price": 1000,
+        "shortDescription": "Luxury leather jacket",
+        "rating": 4.8
+    },
+    {
+        "id": "13",
         "image": "https://example.com/images/zara-jacket.jpg",
         "name": "Zara Leather Jacket",
         "brandName": "Zara",
@@ -36,6 +130,37 @@
         "rating": 4.6
     },
     {
+        "id": "14",
+        "image": "https://example.com/images/zara-jeans.jpg",
+        "name": "Zara Jeans",
+        "brandName": "Zara",
+        "type": "Clothing",
+        "price": 60,
+        "shortDescription": "Comfortable slim fit jeans",
+        "rating": 4.4
+    },
+    {
+        "id": "15",
+        "image": "https://example.com/images/zara-dress.jpg",
+        "name": "Zara Dress",
+        "brandName": "Zara",
+        "type": "Clothing",
+        "price": 80,
+        "shortDescription": "Stylish summer dress",
+        "rating": 4.5
+    },
+    {
+        "id": "16",
+        "image": "https://example.com/images/zara-shirt.jpg",
+        "name": "Zara Shirt",
+        "brandName": "Zara",
+        "type": "Clothing",
+        "price": 40,
+        "shortDescription": "Comfortable cotton shirt",
+        "rating": 4.2
+    },
+    {
+        "id": "17",
         "image": "https://example.com/images/hm-jeans.jpg",
         "name": "H&M Slim Fit Jeans",
         "brandName": "H&M",
@@ -45,6 +170,37 @@
         "rating": 4.1
     },
     {
+        "id": "18",
+        "image": "https://example.com/images/hm-tshirt.jpg",
+        "name": "H&M T-Shirt",
+        "brandName": "H&M",
+        "type": "Clothing",
+        "price": 20,
+        "shortDescription": "Casual cotton t-shirt",
+        "rating": 4.0
+    },
+    {
+        "id": "19",
+        "image": "https://example.com/images/hm-hoodie.jpg",
+        "name": "H&M Hoodie",
+        "brandName": "H&M",
+        "type": "Clothing",
+        "price": 30,
+        "shortDescription": "Warm and comfortable hoodie",
+        "rating": 4.2
+    },
+    {
+        "id": "20",
+        "image": "https://example.com/images/hm-dress.jpg",
+        "name": "H&M Dress",
+        "brandName": "H&M",
+        "type": "Clothing",
+        "price": 50,
+        "shortDescription": "Stylish summer dress",
+        "rating": 4.1
+    },
+    {
+        "id": "21",
         "image": "https://example.com/images/levis-501.jpg",
         "name": "Levi's 501 Original Jeans",
         "brandName": "Levi's",
@@ -52,5 +208,35 @@
         "price": 60,
         "shortDescription": "Classic straight fit jeans",
         "rating": 4.8
+    },
+    {
+        "id": "22",
+        "image": "https://example.com/images/levis-jacket.jpg",
+        "name": "Levi's Denim Jacket",
+        "brandName": "Levi's",
+        "type": "Clothing",
+        "price": 90,
+        "shortDescription": "Classic denim jacket",
+        "rating": 4.6
+    },
+    {
+        "id": "23",
+        "image": "https://example.com/images/levis-shirt.jpg",
+        "name": "Levi's Shirt",
+        "brandName": "Levi's",
+        "type": "Clothing",
+        "price": 40,
+        "shortDescription": "Comfortable casual shirt",
+        "rating": 4.5
+    },
+    {
+        "id": "24",
+        "image": "https://example.com/images/levis-tshirt.jpg",
+        "name": "Levi's T-Shirt",
+        "brandName": "Levi's",
+        "type": "Clothing",
+        "price": 25,
+        "shortDescription": "Classic logo t-shirt",
+        "rating": 4.4
     }
 ]
