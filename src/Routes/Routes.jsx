@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
 
         },
         {
-          path:"/sigIn",
+          path:"/signIn",
           element:<SignIn></SignIn>
         },
         {
