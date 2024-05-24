@@ -1,7 +1,10 @@
+import Footer from "../Shared/Footer/Footer";
+import Navbar from "../Shared/Navbar/Navbar";
 
 const SignUp = () => {
     return (
         <>
+        <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
@@ -32,6 +35,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </>
     );
 };
