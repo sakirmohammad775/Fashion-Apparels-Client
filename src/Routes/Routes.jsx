@@ -6,6 +6,7 @@ import BrandDetails from "../Home/Details/BrandDetails";
 import MyCart from "../Mycart/MyCart";
 import ProductDetails from "../Home/Details/ProductDetails";
 import SignIn from "../SignIn/SignIn";
+import SignUp from "../SIgnUp/SignUp";
 
 
 export const router = createBrowserRouter([
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
         {
           path:"/sigIn",
           element:<SignIn></SignIn>
+        },
+        {
+          path:"signUp",
+          element:<SignUp></SignUp>
         }
       ]
     },
