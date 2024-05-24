@@ -5,6 +5,7 @@ import AddBrand from "../AddBrand/AddBrand"
 import BrandDetails from "../Home/Details/BrandDetails";
 import MyCart from "../Mycart/MyCart";
 import ProductDetails from "../Home/Details/ProductDetails";
+import SignIn from "../SignIn/SignIn";
 
 
 export const router = createBrowserRouter([
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
           path:"/myCart",
           element:<MyCart></MyCart>
 
+        },
+        {
+          path:"/sigIn",
+          element:<SignIn></SignIn>
         }
       ]
     },

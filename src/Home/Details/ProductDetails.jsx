@@ -24,7 +24,9 @@ const ProductDetails = () => {
                 <p>{product.price}</p>
                 <p>{product.rating}</p>
                 <p>{product.description}</p>
-                <div className="card-actions justify-end"></div>
+                <div className="card-actions justify-end">
+                    hello
+                </div>
             </div>
         </div>
     );
