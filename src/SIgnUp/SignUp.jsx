@@ -1,8 +1,18 @@
+import { useState } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 const SignUp = () => {
+    const [isSignUp, setSignUp] = useState(true)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setError('')
+    }
     return (
         <>
-        
+
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left">
@@ -11,7 +21,7 @@ const SignUp = () => {
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body">
-                        <div className="form-control">
+                            <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
@@ -36,7 +46,7 @@ const SignUp = () => {
                                 <button className="btn btn-primary">SignUp</button>
                             </div>
                             <div className="flex my-5 justify-center gap-6">
-                                
+
                                 <button className="pt-2"><FaGoogle /></button>
                                 <button className="pt-2"><FaFacebook /></button>
                             </div>
