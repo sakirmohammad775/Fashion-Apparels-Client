@@ -9,16 +9,23 @@ const SignIn = () => {
         backgroundPosition: 'center', // Center the image
         backgroundRepeat: 'no-repeat', // Do not repeat the image
     };
+    const handleSignIn=e=>{
+        e.preventDefault()
+        const form=e.target
+        const email=form.email.value
+        const password=form.password.value
+        console.log(email,password);
+    }
     return (
         <>
             <div className="hero min-h-screen" style={backgroundImageStyle}>
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">SignUp</h1>
+                        <h1 className="text-5xl font-bold">SignIn</h1>
                         <p className="py-6">Explore Our page</p>
                     </div>
                     <div className="card  w-full max-w-lg bg-transparent">
-                        <form className="card-body">
+                        <form onSubmit={handleSignIn} className="card-body">
                             <div className="form-control w-96">
                                 <label className="label">
                                     <span className="font-bold">Name</span>
@@ -52,7 +59,7 @@ const SignIn = () => {
                         {/*if error found*/}
                        
 
-                        <p className="text-center">Already have an account? <Link to="/signIn">Sign In</Link></p>
+                        <p className="text-center">Already have an account? <Link to="/signUp">Sign In</Link></p>
 
                         {/*another login process*/}
                         <div className="flex my-5 justify-center gap-6">
