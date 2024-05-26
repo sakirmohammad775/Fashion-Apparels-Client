@@ -3,9 +3,9 @@ import { app } from "../Firebase/Firebase.config";
 import { createContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext()
-
 const auth = getAuth(app)
-const AuthProvider = () => {
+
+const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
@@ -33,11 +33,20 @@ const AuthProvider = () => {
             return unSubscribe  // Clean up the subscription
         }
     })
+    const authInfo = {
+        user,
+        loading,
+        createUser,
+        signIn,
+        logOut
+    };
 
 
     return (
         <>
-
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
         </>
     );
 };
