@@ -2,7 +2,12 @@
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import signInImage from "../assets/login2.jpg"
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 const SignIn = () => {
+
+    const {signIn}=useContext(AuthContext)
+
     const backgroundImageStyle = {
         backgroundImage: `url(${signInImage})`,
         backgroundSize: 'cover', // Cover the entire div
@@ -14,8 +19,19 @@ const SignIn = () => {
         const form=e.target
         const email=form.email.value
         const password=form.password.value
-        console.log(email,password);
+        
+
+        signIn(email,password)
+        .then(result=>{
+            const user=result.user
+            console.log(user);
+        })
+        .catch(error=>
+            console.log(error)
+        )
     }
+
+    
     return (
         <>
             <div className="hero min-h-screen" style={backgroundImageStyle}>
@@ -26,12 +42,7 @@ const SignIn = () => {
                     </div>
                     <div className="card  w-full max-w-lg bg-transparent">
                         <form onSubmit={handleSignIn} className="card-body">
-                            <div className="form-control w-96">
-                                <label className="label">
-                                    <span className="font-bold">Name</span>
-                                </label>
-                                <input type="name" placeholder="name" name="name" className="input input-bordered bg-transparent  " required />
-                            </div>
+                            
                             <div className="form-control">
                                 <label className="label">
                                     <span className="font-bold">Email</span>
@@ -53,7 +64,7 @@ const SignIn = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-3">
-                                <button type="submit" className="btn  bg-transparent">SignUp</button>
+                                <button  type="submit" value="Submit"  className="btn  bg-transparent">SignIn</button>
                             </div>
                         </form>
                         {/*if error found*/}
