@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 import { app } from "../Firebase/Firebase.config";
 import { createContext, useEffect, useState } from "react";
 
-export const AuthContext = createContext()
+export const AuthContext = createContext(null)
 const auth = getAuth(app)
 
 const AuthProvider = ({children}) => {
@@ -10,35 +10,37 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
 
     const createUser = (email, password) => {
-        setLoading(true)
-        return createUserWithEmailAndPassword(auth, email, password)
-    }
-    const signIn=(email,password)=>{
-        setLoading(true)
-        return signInWithEmailAndPassword(auth,email,password)
-    }
-    const logOut=()=>{
-        setLoading(true)
-        return signOut(auth)
-    }
+        setLoading(true);
+        return createUserWithEmailAndPassword(auth, email, password);
+    };
+
+    const signIn = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
+    };
+
+    const logOut = () => {
+        setLoading(true);
+        return signOut(auth);
+    };
 
     // When the authentication state changes, the user state is updated with the current user, and the loading state is set to false.
     useEffect(()=>{
         const unSubscribe=onAuthStateChanged(auth,currentUser=>{
             setUser(currentUser)
             console.log('current User:',currentUser);
-            setLoading(true)
+            setLoading(false)
         })
         return()=>{
             return unSubscribe  // Clean up the subscription
         }
     })
     const authInfo = {
-        user,
-        loading,
-        createUser,
-        signIn,
-        logOut
+       user,
+       createUser,
+       loading,
+       logOut,
+       signIn
     };
 
 
