@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-    const { user, signOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const handleLogOut = () => {
-        signOut()
+        logOut()
             .then()
             .catch(error => {
                 console.log(error);

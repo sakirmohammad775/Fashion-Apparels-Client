@@ -1,15 +1,16 @@
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, } from "firebase/auth";
 import { app } from "../Firebase/Firebase.config";
 import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth/web-extension";
+import { FacebookAuthProvider, GoogleAuthProvider} from "firebase/auth/web-extension";
 
 export const AuthContext = createContext(null)
 const auth = getAuth(app)
+const googleProvider = new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider()
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
-    const provider = new GoogleAuthProvider();
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -21,14 +22,19 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     };
 
-    const signOut = () => {
+    const logOut = () => {
         setLoading(true);
-        return signOut(auth);
+        return signOut(auth)
     };
 
     const signInWithGoogle = () => {
         setLoading(true)
-        return signInWithPopup(auth, provider)
+        return signInWithPopup(auth, googleProvider);
+    }
+    //facebook login
+    const signInWithFacebook=()=>{
+        setLoading(true)
+        return signInWithPopup(auth,facebookProvider)
     }
 
     // When the authentication state changes, the user state is updated with the current user, and the loading state is set to false.
@@ -39,16 +45,17 @@ const AuthProvider = ({ children }) => {
             setLoading(false)
         })
         return () => {
-            return unSubscribe  // Clean up the subscription
+            return unSubscribe()  // Clean up the subscription
         }
-    })
+    },[])
     const authInfo = {
         user,
         loading,
         createUser,
-        signOut,
+        logOut,
         signIn,
-        signInWithGoogle
+        signInWithGoogle,
+        signInWithFacebook
     };
 
 

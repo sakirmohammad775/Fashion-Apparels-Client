@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 const SignIn = () => {
 
-    const { signIn } = useContext(AuthContext)
+    const { signIn, signInWithGoogle,signInWithFacebook} = useContext(AuthContext)
     const navigate = useNavigate()
     const [error, setError] = useState('')
 
@@ -33,9 +33,27 @@ const SignIn = () => {
                 // Set error message from Firebase
                 setError(error.message)
             )
-
+        }
+        const handleGoogleSignIn =() => {
+            signInWithGoogle()
+            .then(result=>{
+                console.log(result.user);
+            })
+            .then(error=>{
+                console.error(error)
+            })
             
-    }
+        };
+        const handleFacebookSignIn =() => {
+            signInWithFacebook()
+            .then(result=>{
+                console.log(result.user);
+            })
+            .then(error=>{
+                console.error(error)
+            })
+            
+        };
 
 
     return (
@@ -82,8 +100,8 @@ const SignIn = () => {
                         {/*another login process*/}
                         <div className="flex my-5 justify-center gap-6">
 
-                            <button className="pt-2"><FaGoogle /></button>
-                            <button className="pt-2"><FaFacebook /></button>
+                            <button className="pt-2"onClick={handleGoogleSignIn}><FaGoogle /></button>
+                            <button className="pt-2" onClick={handleFacebookSignIn}><FaFacebook /></button>
                         </div>
                     </div>
                 </div>
