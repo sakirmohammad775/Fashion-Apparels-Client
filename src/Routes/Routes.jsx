@@ -7,6 +7,7 @@ import MyCart from "../Mycart/MyCart";
 import ProductDetails from "../Home/Details/ProductDetails";
 import SignIn from "../SignIn/SignIn";
 import SignUp from "../SIgnUp/SignUp";
+import NotFound from "../NotFound/NotFound";
 
 
 export const router = createBrowserRouter([
@@ -45,7 +46,11 @@ export const router = createBrowserRouter([
         {
           path:"signUp",
           element:<SignUp></SignUp>
-        }
+        },
+        {
+          path: "*", // This will match any route that is not defined above
+          element: <NotFound></NotFound>
+      }
       ]
     },
   ]);
