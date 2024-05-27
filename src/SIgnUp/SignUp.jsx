@@ -1,11 +1,13 @@
 import { useContext, } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import signUpImage from "../assets/login2.jpg"
 
 const SignUp = () => {
     const { createUser } = useContext(AuthContext)
+    const navigate=useNavigate()
+
     const backgroundImageStyle = {
         backgroundImage: `url(${signUpImage})`,
         backgroundSize: 'cover', // Cover the entire div
@@ -26,6 +28,7 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user
                 console.log(user); //for testing
+                navigate('/')
             })
             .catch(error => console.log(error))
     }
