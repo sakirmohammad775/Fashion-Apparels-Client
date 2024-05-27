@@ -11,8 +11,7 @@ const MyCart = () => {
             .catch(err => console.error("Error fetching cart items:", err));
     }, []);
 
-    const handleRemove = (itemId) => {
-        // Implement the remove item functionality
+    const handleRemoveFromCart = (itemId) => {
         fetch(`http://localhost:5000/cart/${itemId}`, {
             method: 'DELETE',
             headers: {
@@ -21,13 +20,15 @@ const MyCart = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.deletedCount > 0) {
-                    setCartItems(cartItems.filter(item => item._id !== itemId))
+                if (data.message === 'Item deleted successfully') {
+                    // Remove the item from the cartItems state
+                    setCartItems(cartItems.filter(item => item._id !== itemId));
                 } else {
-                    console.error("Failed to remove item from server");
+                    console.error("Failed to delete item from server");
                 }
             })
-            .catch(err => console.error("Error removing cart item:", err));
+            .catch(err => 
+                console.error(err));
     };
 
     const getTotalPrice = () => {
@@ -51,7 +52,7 @@ const MyCart = () => {
                                     </div>
                                 </div>
                                 <button
-                                    onClick={() => handleRemove(item._id)}
+                                    onClick={() => handleRemoveFromCart(item._id)}
                                     className="px-4 py-2 text-white bg-red-500 rounded-lg hover:bg-red-700"
                                 >
                                     Remove
