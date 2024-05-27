@@ -2,13 +2,14 @@
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import signInImage from "../assets/login2.jpg"
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 const SignIn = () => {
 
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
-    
+    const [error, setError] = useState('')
+
     const backgroundImageStyle = {
         backgroundImage: `url(${signInImage})`,
         backgroundSize: 'cover', // Cover the entire div
@@ -20,7 +21,7 @@ const SignIn = () => {
         const form = e.target
         const email = form.email.value
         const password = form.password.value
-
+        setError('')
 
         signIn(email, password)
             .then(result => {
@@ -29,8 +30,11 @@ const SignIn = () => {
                 navigate('/');
             })
             .catch(error =>
-                console.log(error)
+                // Set error message from Firebase
+                setError(error.message)
             )
+
+            
     }
 
 
@@ -70,6 +74,7 @@ const SignIn = () => {
                             </div>
                         </form>
                         {/*if error found*/}
+                        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
 
 
                         <p className="text-center">Already have an account? <Link to="/signUp">Sign In</Link></p>
