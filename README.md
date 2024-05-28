@@ -1,10 +1,15 @@
 Project Name:Fashion and Apparel( Nike, Adidas, Gucci, Zara, H&M, Levi's, etc.)
 
 ✍️ Home page will have a navbar, banner, footer and at least 6 types of brand names having the following information: brand imageand brand name.
+
 ✍️The navbar will have website name with logo, Home, Add Product, My Cart, and Login.
+
 ✍️Add two extra sections in the home page in addition to the 4 sections mentioned above.
+
 ✍️Create an Add Product page where there will be a form for the user to add a product. The form will have:[Image,Name,Brand Name,Type,Price,Short description,Rating,Add button,This will be a private/protected route.
+
 ✍️On clicking a brand will redirect the user to the page having products based on that brand. On that page, there will be a slider having at least 3 advertisement images and at least 4 products. Each product will have : (Image ,Name,Brand Name,Type,Price,Short description,Rating,Add button,Details button,Update button )
+
 Note: Among these six brand types, one of them will not have any available products. You will have to show a relevant message on brand page to inform the users.
 
 ✍️Clicking on the Details button will take the user to the product detail route. Each route should display detailed information of the product. What you will include in the detailed information is entirely upto you but make sure it is relevant. Make sure to implement the Add to Cart button.
