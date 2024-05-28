@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
+
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+  
     const handleLogOut = () => {
         logOut()
             .then()
@@ -11,14 +13,13 @@ const Navbar = () => {
                 console.log(error);
             })
     }
-    const navItems=<>
-            <Link className="mr-5" to='/'>Home</Link>
-            <Link className="mr-5" to='/addCart'>AddCart</Link>
-            <Link className="mr-5" to='/myCart'>MyCart</Link>
-            <Link className="mr-5" to='/Contact'>Contact</Link>
-            <Link className="mr-5" to='/Blog'>Blog</Link>
+    const navItems = <>
+        <Link className="mr-5" to='/'>Home</Link>
+        <Link className="mr-5" to='/addBrand'>AddProduct</Link>
+        <Link className="mr-5" to='/myCart'>MyCart</Link>
+        <Link className="mr-5" to='/Contact'>Contact</Link>
+        <Link className="mr-5" to='/Blog'>Blog</Link>
     </>
-
     return (
         <>
             <div className="navbar bg-base-100">
@@ -48,6 +49,8 @@ const Navbar = () => {
 
                     }
                 </div>
+                {/* toggle */}
+                
             </div>
         </>
     );

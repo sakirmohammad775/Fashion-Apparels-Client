@@ -12,11 +12,14 @@ const BrandDetails = () => {
     }
 
     return (
+        <>
+        <div><h3 className="text-3xl font-semibold text-center mt-5">{brandName} Product</h3></div>
         <div className="md:grid grid-cols-3 my-20">
             {brandProducts.map(product => (
                 <div key={product.name} className="card card-compact w-96 bg-base-100 shadow-xl">
                     <figure><img src={product.image} alt={product.name} /></figure>
                     <div className="card-body">
+                        
                         <h2 className="card-title">{product.brandName}</h2>
                         <p>{product.name}</p>
                         <p>{product.price}</p>
@@ -28,6 +31,7 @@ const BrandDetails = () => {
                 </div>
             ))}
         </div>
+        </>
     );
 };
 
